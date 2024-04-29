@@ -37,5 +37,5 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Got nuthin but love for ya playa"}
+    return {"message": "Bonanza"}
 
