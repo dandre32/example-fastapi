@@ -1,6 +1,7 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, conint, Field
 from datetime import datetime
 from typing import Optional
+from typing_extensions import Annotated
 from pydantic import conint
 
 class PostBase(BaseModel):
@@ -50,4 +51,4 @@ class TokenData(BaseModel):
 
 class Vote(BaseModel):
     post_id: int
-    dir: conint(le=1)
+    dir: Annotated[int, Field(le=1)]
